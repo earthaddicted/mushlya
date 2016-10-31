@@ -158,40 +158,46 @@ header p {
 .epochs__wrapper {
     -webkit-justify-content: space-between;
             justify-content: space-between;
-        padding: 0 100px;
-
+    padding: 117px 100px 100px;
+    transition: all .5s linear;
 }
 
 .time-section {
-    margin: 117px 0 100px;
-    transition: all .4s linear;
+    transition: margin .9s linear;
+    padding-bottom: 100px;
+    transform: scale(1);
+    transition: all .5s linear;
 }
 
 .time-section:not(.time-section--active):hover {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-.time-section:hover .epochs__image {
-  margin: 15px 0 -15px;
+.time-section:not(.time-section--active):hover .epochs__name {
+    padding-bottom: 36px;
+    /*transition: all .5s ease-in-out;*/
+    transition: all .5s linear;
 }
 
 .time-section--active {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
-.time-section--active .epochs__image {
-
-  margin: 15px 0 -15px;
+.time-section--active .epochs__name {
+    padding-bottom: 36px;
 }
+
+/*.time-section--active .epochs__image {
+    margin: 15px 0 -15px;
+}*/
 
 /*.time-section:hover:not(.time-section--active) > .time-section--active:not(:hover) {
   transform: scale(1);
 }*/
 
-
 .epochs__name {
     font-size: 20px;
-    border-bottom: 1px #8d8d8d;
+    border-bottom: 1px solid #8d8d8d;
     padding: 15px 0 15px 26px;
     margin: 10px 0 20px;
 }
@@ -212,21 +218,16 @@ header p {
 }
 
 .epochs__bg {
-
-  -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
     padding-bottom: 120px;    
 }
 
-
-
-.epochs__bg--future {
+/*.epochs__bg--future {
   background: url('../img/future-map.jpg') rgba(255, 255, 255, .1) no-repeat cover;
-}
-
-
+}*/
 
 .epochs__image {
     width: 229px;
@@ -234,8 +235,6 @@ header p {
     opacity: 1;
     transition: all .4s linear;
 }
-
-
 
 /* _________________ end of epochs _________________*/
 /* END OF MAIN*/
