@@ -163,7 +163,7 @@ header p {
 }
 
 .time-section {
-    transition: margin .9s linear;
+    /*transition: margin .9s linear;*/
     padding-bottom: 100px;
     transform: scale(1);
     transition: all .5s linear;
@@ -200,6 +200,7 @@ header p {
     border-bottom: 1px solid #8d8d8d;
     padding: 15px 0 15px 26px;
     margin: 10px 0 20px;
+    transition: all .4s linear;
 }
 
 .time-section:first-child {
