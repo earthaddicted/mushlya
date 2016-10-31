@@ -9,17 +9,26 @@ html {
             justify-content: center;
 }
 
-body {
+body,
+.menu,
+.time-section {
     background: #fff;
-    max-width: 1200px;
-      
+}
+
+@font-face { 
+    font-family: "Myriad  Pro";
+    src: url('../fonts/MyriadPro-Regular.otf');
 }
 
 
-
-
 /* GENERAL*/
-html {
+
+html,
+header,
+section,
+.wrapper,
+.menu,
+.epochs {
     display: -webkit-flex;
       display: -moz-flex;
         display: -ms-flex;
@@ -27,15 +36,37 @@ html {
             display: flex;
     }
 
+
+header,
+section {
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+   max-width: 1068px;
+   width: 100%;    
+}
+
+body {
+  width: 100vw;
+  font-family: "Myriad  Pro";
+}
+
 /* fonts*/
 
 /* END of GENERAL*/
 
 
 /* HEADER*/
-header {
-    width: 100vw;
-}
+/* ____OLYA ____*/
+/*header {
+    
+}*/
 /* LOGO*/
 /*.logo {
     display: block;
@@ -48,8 +79,6 @@ header {
 
 /* MENU*/
 .menu {
-  display: flex;
-  background-color: #fff;
   color: #d36260;
   width: 790px;
   height: 58px;
@@ -58,8 +87,7 @@ header {
 
 .menu a {
   color: #d36260;
-  text-decoration: none;
-  font-family: "Myriad  Pro", Arial, sans-serif;
+/*  font-family: "Myriad  Pro", Arial, sans-serif;*/
   width: 59px;
   height: 9px;
   font-size: 13px;
@@ -84,7 +112,7 @@ header {
   color: #fff;
   width: 150px;
   height: 14px;
-  font-family: "Myriad Pro", Arial, sans-serif;
+/*  font-family: "Myriad Pro", Arial, sans-serif;*/
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
@@ -93,23 +121,23 @@ header {
 li.help_project  {
     -webkit-align-self: center;
           align-self: center;
-  background-color: #dc8e8d;
-  width: 268px;
-  line-height: 57px;
+    background-color: #dc8e8d;
+    width: 268px;
+    line-height: 57px;
 }
 
 li.help_project:hover {
-  background: #d36462;
+    background: #d36462;
 }
 
 header p {
-  width: 530px;
-  height: 23px;
-  color: #ac5251;
-  font-family: Marion, Arial, sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  line-height: 24px;
+    width: 530px;
+    height: 23px;
+    color: #ac5251;
+/*    font-family: "Myriad  Pro", Arial, sans-serif;*/
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 /* END OF PROJECT*/
@@ -118,6 +146,94 @@ header p {
 /* MAIN*/
 
 /* _________________ epochs _________________*/
+.epochs {
+    background: url('../img/main_bg.png') no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    width: 100vw;
+    height: auto;
+}
+
+.epochs__wrapper {
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+        padding: 0 100px;
+
+}
+
+.time-section {
+    margin: 117px 0 100px;
+    transition: all .4s linear;
+}
+
+.time-section:not(.time-section--active):hover {
+  transform: scale(1.2);
+}
+
+.time-section:hover .epochs__image {
+  margin: 15px 0 -15px;
+}
+
+.time-section--active {
+  transform: scale(1.2);
+}
+
+.time-section--active .epochs__image {
+
+  margin: 15px 0 -15px;
+}
+
+/*.time-section:hover:not(.time-section--active) > .time-section--active:not(:hover) {
+  transform: scale(1);
+}*/
+
+
+.epochs__name {
+    font-size: 20px;
+    border-bottom: 1px #8d8d8d;
+    padding: 15px 0 15px 26px;
+    margin: 10px 0 20px;
+}
+
+.time-section:first-child {
+    color: #d3ac26;
+    border: 3px solid #d3ac26;
+}
+
+.time-section:nth-child(2) {
+    color: #6e9071;
+    border: 3px solid #6e9071;
+}
+
+.time-section:last-child {
+    color: #5c6092;
+    border: 3px solid #5c6092;
+}
+
+.epochs__bg {
+
+  -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    padding-bottom: 120px;    
+}
+
+
+
+.epochs__bg--future {
+  background: url('../img/future-map.jpg') rgba(255, 255, 255, .1) no-repeat cover;
+}
+
+
+
+.epochs__image {
+    width: 229px;
+    height: 165px;
+    opacity: 1;
+    transition: all .4s linear;
+}
 
 
 

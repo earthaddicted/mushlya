@@ -9,21 +9,48 @@
 </head>
 <body>
     <header>
-        <div class="logo"></div>
-        <ul class="menu">
-            <li><a href="">Головна</a></li>
-            <li><a href="">Про нас</a></li>
-            <li><a href="">Пам'ятки</a></li>
-            <li><a href="">Міста</a></li>
-            <li><a href="">Галерея</a></li>
-            <li><a href="">Контакти</a></li>
-            <li class="help_project"><a href="">Допомогти проекту</a></li>
-        </ul>
-        <p>Динамічна колекція цікавих міських просторів</p>
+        <div class="wrapper">
+            <div class="logo"></div>
+            <ul class="menu">
+                <li><a href="">Головна</a></li>
+                <li><a href="">Про нас</a></li>
+                <li><a href="">Пам'ятки</a></li>
+                <li><a href="">Міста</a></li>
+                <li><a href="">Галерея</a></li>
+                <li><a href="">Контакти</a></li>
+                <li class="help_project"><a href="">Допомогти проекту</a></li>
+            </ul>
+            <p>Динамічна колекція цікавих міських просторів</p>
+        </div>
+            
     </header>
     <main>
     	<section class="epochs">
-            
+            <div class="wrapper epochs__wrapper">
+            <!-- epochs  -->
+                <div class="time-section">
+                    <h3 class="epochs__name">
+                        Минуле
+                    </h3>
+                    <img src="img/old-map.jpg" alt="old map" class="epochs__image">
+                </div>
+                <div class="time-section time-section--active">
+                    <h3 class="epochs__name">
+                        Сучасне
+                    </h3>
+                    <img src="img/modern-map.jpg" alt="modern map" class="epochs__image">
+                </div>
+                <div class="time-section">
+                    <h3 class="epochs__name">
+                        Майбутнє
+                    </h3>
+                    <div class="epochs__bg epochs__bg--future">
+                       <img src="img/future-map.jpg" alt="future map" class="epochs__image"> 
+                    </div>
+                    
+                </div>
+                 <!-- end of epochs  -->
+            </div>
         </section>
     </main>
     <footer>
