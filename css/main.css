@@ -1,0 +1,125 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+
+body {
+    background: #fff;
+    max-width: 1200px;
+      
+}
+
+
+
+
+/* GENERAL*/
+html {
+    display: -webkit-flex;
+      display: -moz-flex;
+        display: -ms-flex;
+          display: -o-flex;
+            display: flex;
+    }
+
+/* fonts*/
+
+/* END of GENERAL*/
+
+
+/* HEADER*/
+header {
+    width: 100vw;
+}
+/* LOGO*/
+/*.logo {
+    display: block;
+    float: left;
+    background: url('../img/logo.png') no-repeat;
+    width: 239px;
+    height: 222px;
+}*/
+/* END OF LOGO*/
+
+/* MENU*/
+.menu {
+  display: flex;
+  background-color: #fff;
+  color: #d36260;
+  width: 790px;
+  height: 58px;
+  box-shadow: 2.5px 4.3px 43px rgba(0, 1, 1, 0.13);
+}
+
+.menu a {
+  color: #d36260;
+  text-decoration: none;
+  font-family: "Myriad  Pro", Arial, sans-serif;
+  width: 59px;
+  height: 9px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  font-weight: bold;
+}
+
+.menu li { 
+  -webkit-align-self: center;
+          align-self: center;
+  width: 87px;
+  text-align: center;
+}
+/*// END OF MENU*/
+/*// PROJECT*/
+.help_project a {
+  color: #fff;
+  width: 150px;
+  height: 14px;
+  font-family: "Myriad Pro", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+li.help_project  {
+    -webkit-align-self: center;
+          align-self: center;
+  background-color: #dc8e8d;
+  width: 268px;
+  line-height: 57px;
+}
+
+li.help_project:hover {
+  background: #d36462;
+}
+
+header p {
+  width: 530px;
+  height: 23px;
+  color: #ac5251;
+  font-family: Marion, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* END OF PROJECT*/
+
+/* END OF HEADER*/
+/* MAIN*/
+
+/* _________________ epochs _________________*/
+
+
+
+/* _________________ end of epochs _________________*/
+/* END OF MAIN*/
