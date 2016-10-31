@@ -1,23 +1,23 @@
 * {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
 }
 
 html {
-    -webkit-justify-content: center;
-            justify-content: center;
+	-webkit-justify-content: center;
+			justify-content: center;
 }
 
 body,
 .menu,
 .time-section {
-    background: #fff;
+	background: #fff;
 }
 
 @font-face { 
-    font-family: "Myriad  Pro";
-    src: url('../fonts/MyriadPro-Regular.otf');
+	font-family: "Myriad  Pro";
+	src: url('../fonts/MyriadPro-Regular.otf');
 }
 
 
@@ -29,22 +29,22 @@ section,
 .wrapper,
 .menu,
 .epochs {
-    display: -webkit-flex;
-      display: -moz-flex;
-        display: -ms-flex;
-          display: -o-flex;
-            display: flex;
-    }
+	display: -webkit-flex;
+	  display: -moz-flex;
+		display: -ms-flex;
+		  display: -o-flex;
+			display: flex;
+	}
 
 
 header,
 section {
   -webkit-justify-content: center;
-          justify-content: center;
+		  justify-content: center;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .wrapper {
@@ -65,15 +65,15 @@ body {
 /* HEADER*/
 /* ____OLYA ____*/
 /*header {
-    
+	
 }*/
 /* LOGO*/
 /*.logo {
-    display: block;
-    float: left;
-    background: url('../img/logo.png') no-repeat;
-    width: 239px;
-    height: 222px;
+	display: block;
+	float: left;
+	background: url('../img/logo.png') no-repeat;
+	width: 239px;
+	height: 222px;
 }*/
 /* END OF LOGO*/
 
@@ -102,7 +102,7 @@ body {
 
 .menu li { 
   -webkit-align-self: center;
-          align-self: center;
+		  align-self: center;
   width: 87px;
   text-align: center;
 }
@@ -119,25 +119,25 @@ body {
 }
 
 li.help_project  {
-    -webkit-align-self: center;
-          align-self: center;
-    background-color: #dc8e8d;
-    width: 268px;
-    line-height: 57px;
+	-webkit-align-self: center;
+		  align-self: center;
+	background-color: #dc8e8d;
+	width: 268px;
+	line-height: 57px;
 }
 
 li.help_project:hover {
-    background: #d36462;
+	background: #d36462;
 }
 
 header p {
-    width: 530px;
-    height: 23px;
-    color: #ac5251;
+	width: 530px;
+	height: 23px;
+	color: #ac5251;
 /*    font-family: "Myriad  Pro", Arial, sans-serif;*/
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 24px;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 24px;
 }
 
 /* END OF PROJECT*/
@@ -147,83 +147,99 @@ header p {
 
 /* _________________ epochs _________________*/
 .epochs {
-    background: url('../img/main_bg.png') no-repeat;
-    -webkit-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
-    width: 100vw;
-    height: auto;
+	background: url('../img/main_bg.png') no-repeat;
+	-webkit-background-size: cover;
+		 -o-background-size: cover;
+			background-size: cover;
+	width: 100vw;
+	height: auto;
 }
 
 .epochs__wrapper {
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
-    padding: 117px 100px 100px;
-    transition: all .5s linear;
+	-webkit-justify-content: space-between;
+			justify-content: space-between;
+	padding: 117px 100px 100px;
+	transition: all .5s linear;
 }
 
 .time-section {
-    /*transition: margin .9s linear;*/
-    padding-bottom: 100px;
-    transform: scale(1);
-    transition: all .5s linear;
+	padding-bottom: 100px;
+	transition: all .5s linear;
 }
 
 .time-section:not(.time-section--active):hover {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
+.time-section:first-of-type:hover + .time-section {
+	transform: scale(1);
+}
+
+/*.time-section:last-of-type:hover:nth-of-type(-n+4)  {
+	transform: scale(1);
+}*/
+
+/*.time-section:nth-of-type(3):hover:nth-child(-n+1)  {
+	transform: scale(1);
+}*/
+
+.time-section:last-of-type:hover + div[class="time-section--active"] {
+	transform: scale(1);
+}
+
+
 .time-section:not(.time-section--active):hover .epochs__name {
-    padding-bottom: 36px;
-    /*transition: all .5s ease-in-out;*/
-    transition: all .5s linear;
+	padding-bottom: 36px;
+	transition: all .5s linear;
 }
 
 .time-section--active {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .time-section--active .epochs__name {
-    padding-bottom: 36px;
+	padding-bottom: 36px;
 }
 
 /*.time-section--active .epochs__image {
-    margin: 15px 0 -15px;
+	margin: 15px 0 -15px;
 }*/
+
+
 
 /*.time-section:hover:not(.time-section--active) > .time-section--active:not(:hover) {
   transform: scale(1);
 }*/
 
 .epochs__name {
-    font-size: 20px;
-    border-bottom: 1px solid #8d8d8d;
-    padding: 15px 0 15px 26px;
-    margin: 10px 0 20px;
-    transition: all .4s linear;
+	font-size: 20px;
+	border-bottom: 1px solid #8d8d8d;
+	padding: 15px 0 15px 26px;
+	margin: 10px 0 20px;
+	transition: all .4s linear;
 }
 
 .time-section:first-child {
-    color: #d3ac26;
-    border: 3px solid #d3ac26;
+	color: #d3ac26;
+	border: 3px solid #d3ac26;
 }
 
 .time-section:nth-child(2) {
-    color: #6e9071;
-    border: 3px solid #6e9071;
+	color: #6e9071;
+	border: 3px solid #6e9071;
 }
 
 .time-section:last-child {
-    color: #5c6092;
-    border: 3px solid #5c6092;
+	color: #5c6092;
+	border: 3px solid #5c6092;
 }
 
 .epochs__bg {
-    -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-    padding-bottom: 120px;    
+	-moz-transform: scaleX(-1);
+	  -o-transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		  transform: scaleX(-1);
+	padding-bottom: 120px;    
 }
 
 /*.epochs__bg--future {
@@ -231,11 +247,14 @@ header p {
 }*/
 
 .epochs__image {
-    width: 229px;
-    height: 165px;
-    opacity: 1;
-    transition: all .4s linear;
+	width: 229px;
+	height: 165px;
+   /* opacity: 1;*/
+	transition: all .4s linear;
 }
-
 /* _________________ end of epochs _________________*/
+
+/* _________________ search _________________*/
+
+/* _________________ end search _________________*/
 /* END OF MAIN*/
