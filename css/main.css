@@ -21,7 +21,6 @@ body,
 
 
 /* GENERAL*/
-
 html,
 header,
 section,
@@ -29,6 +28,7 @@ section,
 .menu,
 .epochs,
 .search,
+.label-text,
 .about,
 footer {
 	display: -webkit-flex;
@@ -276,16 +276,52 @@ body {
 	    margin-right: 25px;
 }
 
-label {
-	margin: 5px 0;
+.search__type label {
+    margin: 6px 0;
+    cursor: pointer;
+    display: flex;
 }
 
 .label-text {
 	color: #505d7d;
 	font-size: 16px;
 	line-height: 24px;
-	margin: 25px 15px;
+	margin: 0 15px;
+	align-items: center;
 }
+
+.search__type  input[type="checkbox"] {
+	display: none;
+}
+
+
+.search__type label > input[type="checkbox"] + .label-text::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	/*background-color: rgba(147, 147, 147, .5);*/
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	display: inline-block;
+	margin: 0 4px 0 6px;
+	font-size: 18px;
+}
+
+.search__type label > input[type="checkbox"] + .label-text:hover::before {
+	background-color: rgba(147, 147, 147, .5);
+}
+
+.search__type label > input[type="checkbox"]:checked + .label-text::before {
+		display: flex;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		content: "\2714";
+		background-color: rgba(147, 147, 147, .5);
+		color: #fff;
+		font-weight: 200;
+}
+
+/*// */
 
 .search_form {
 	width: 149px;
@@ -336,22 +372,22 @@ label {
 	-ms-transition: background 5s linear;
 	-o-transition: background 5s linear;
 	transition: background 5s linear;
-	
 }
 
 .search_form__global:hover {
 	background-position: 150px 12px;
+	
 }
 
-.hidden {
-	display: none;
+.search__type {
+	// display: none;
 }
 
-.visible {
+.global__search-activ {
 	display: flex;
 }
 
-.visible:hover .search__type {
+.global__search-activ:hover .hidden {
 	display: flex;
 }
 
