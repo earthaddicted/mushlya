@@ -9,20 +9,20 @@
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <div class="logo"></div>
-            <ul class="menu">
-                <li><a href="">Головна</a></li>
-                <li><a href="">Про нас</a></li>
-                <li><a href="">Пам'ятки</a></li>
-                <li><a href="">Міста</a></li>
-                <li><a href="">Галерея</a></li>
-                <li><a href="">Контакти</a></li>
-                <li class="help_project"><a href="">Допомогти проекту</a></li>
-            </ul>
-            <p>Динамічна колекція цікавих міських просторів</p>
-        </div>
-            
+        <div class="content">
+    <div class="header flex">
+        <div class="logo"></div>
+        <ul class="menu menu__header">
+            <li class="menu__item"><a class="menu__link" href="">Головна</a></li>
+            <li class="menu__item"><a class="menu__link"href="">Про нас</a></li>
+            <li class="menu__item"><a class="menu__link"href="">Пам'ятки</a></li>
+            <li class="menu__item"><a class="menu__link"href="">Міста</a></li>
+            <li class="menu__item"><a class="menu__link"href="">Галерея</a></li>
+            <li class="menu__item"><a class="menu__link"href="">Контакти</a></li>
+            <li class="menu__item menu__item_help"><a class="menu__link menu__link_help" href="">Допомогти проекту</a></li>
+        </ul>
+        <h1 class="name">Динамічна колекція цікавих міських просторів</h1>
+    </div>   
     </header>
     <main>
     	<section class="epochs">
@@ -34,7 +34,8 @@
                     </h3>
                     <img src="img/old-map.jpg" alt="old map" class="epochs__image">
                 </div>
-                <div class="time-section time-section--active">
+                <div class="time-section "> 
+                <!-- time-section--active -->
                     <h3 class="epochs__name">
                         Сучасне
                     </h3>
@@ -50,17 +51,192 @@
             </div>
         </section>
         <section class="search">
-            <div class="wrapper">
-               <div class="search__type"></div>
-               <div class="search__type"></div>
-               <div class="search__type"></div>
-               <div class="search__type"></div>
-               <div class="search__type"></div>
+            <div class="wrapper search__wrapper">
+               <div class="search__type hidden ">
+                   <h3 class="search__title">МІСТА</h3>
+                   <label for="checkbox-1">
+                        <input id="checkbox-1" type="checkbox">
+                        <span class="label-text">Київ</span>
+                    </label>
+                    <label for="checkbox-2">
+                        <input id="checkbox-2" type="checkbox">
+                        <span class="label-text">Вінниця</span>
+                    </label>
+                   <label for="checkbox-3">
+                        <input id="checkbox-3" type="checkbox">
+                        <span class="label-text">Ужгород</span>
+                    </label>
+                    <label for="checkbox-4">
+                        <input id="checkbox-4" type="checkbox">
+                        <span class="label-text">Одеса</span>
+                    </label>
+                    <label for="checkbox-5">
+                        <input id="checkbox-5" type="checkbox">
+                        <span class="label-text">Львів</span>
+                    </label>
+                   <input type="text" class="search_form search_form__local search_form__local--right" placeholder="Аа">
+                    
+               </div>
+               <div class="search__type hidden">
+
+                   <h3 class="search__title">КАТЕГОРІЇ</h3>
+                   <label for="checkbox-6">
+                        <input id="checkbox-6" type="checkbox">
+                        <span class="label-text">Арт</span>
+                    </label>
+                    <label for="checkbox-7">
+                        <input id="checkbox-7" type="checkbox">
+                        <span class="label-text">Музика</span>
+                    </label>
+                    <label for="checkbox-8">
+                        <input id="checkbox-8" type="checkbox">
+                        <span class="label-text">Скульптура</span>
+                    </label>
+                    <label for="checkbox-9">
+                        <input id="checkbox-9" type="checkbox">
+                        <span class="label-text">Відпочинок</span>
+                    </label>
+                    <label for="checkbox-10">
+                        <input id="checkbox-10" type="checkbox">
+                        <span class="label-text">Унікальні місця</span>
+                    </label>
+               </div>
+               <div class="search__type global__search visible">
+                   <!-- <input type="submit" value=" пошук..." class="search_form search_form__global"> -->
+                   <button class="search_form search_form__global visible">
+                        пошук...
+                   </button>
+                   <div class="map">
+                       
+                   </div>
+               </div>
+               <div class="search__type hidden">
+                   <div class="search__geolocation">
+                       Геолокація: On
+                   </div>
+                   <div class="search-radius">
+                       <h3 class="search__title">РАДІУС ПОШУКУ</h3>
+                       <input type="text" class="search_form search_form__local search_form__local--left">    
+                   </div>
+               </div>
+               <div class="search__type hidden">
+                   <h3 class="search__title">МАШИНА ЧАСУ</h3>
+                    <label for="checkbox-11">
+                        <input id="checkbox-11" type="checkbox">
+                        <span class="label-text">Нові цікаві споруди</span>
+                    </label>
+                    <label for="checkbox-12">
+                        <input id="checkbox-12" type="checkbox">
+                        <span class="label-text">Реставровані пам’ятки</span>
+                    </label>
+                    <label for="checkbox-13">
+                        <input id="checkbox-13" type="checkbox">
+                        <span class="label-text">Будинки-привиди</span>
+                    </label>
+                    <label for="checkbox-14">
+                        <input id="checkbox-14" type="checkbox">
+                        <span class="label-text">Старі церкви</span>
+                    </label>
+                    <label for="checkbox-15">
+                        <input id="checkbox-15" type="checkbox">
+                        <span class="label-text">У стані руйнації</span>
+                    </label>
+                    <label for="checkbox-16">
+                        <input id="checkbox-16" type="checkbox">
+                        <span class="label-text">Проекти майбутнього</span>
+                    </label>
+               </div>
             </div>
         </section>
+        <section class="about">
+            <div class="wrapper about__wrapper">
+                <div class="about__info">
+                    <h3 class="about__title">
+                        ХТО МИ?
+                    </h3>
+                    <p class="about_text">
+                        Команда ентузіастів, які люблять вивчати міста, подорожувати, ділитися з іншим и своїми знаннями та враженнями.
+                    </p>
+                </div>
+                <div class="about__info">
+                    <h3 class="about__title">ЩО МИ ПРОПОНУЄМО?</h3>
+                    <ul class="about_text">
+                        <li>- Інтерактивні карти</li>
+                        <li>- Перетин минулого й сучасності</li>
+                        <li>- 3-D візуалізацію об’єктів</li>
+                        <li>- Зручний пошук за рубриками</li>
+                        <li>- Побудова цікавого маршруту та підказки просто у ваш смартфон</li>
+                    </ul>
+                </div>
+                <div class="about__info">
+                    <h3 class="about__title">ЯК ДОЛУЧИТИСЯ?</h3>
+                    <ul class="about_text">
+                        <li>- Завантажуйте власні  фото</li>
+                        <li>- Позначайте цікаві  місця на карті</li>
+                        <li>- Розкажіть про нас своїм друзям</li>
+                        <li>- Підтримайте наш проект фінансово</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
     </main>
-    <footer>
-        
+    <footer class="footer flex">
+        <div class="grey">
+            <div class="wrapper">
+
+            <ul class="menu footer__menu">
+                <h2 class="footer__menu_heading">Категорії</h2>
+                <li><a class="footer__menu_link" href="">Архітектурні комплекси</a></li>
+                <li><a class="footer__menu_link" href="">Парки, сади, алеї</a></li>
+                <li><a class="footer__menu_link" href="">Музеї, експозиції</a></li>
+                <li><a class="footer__menu_link" href="">Музика</a></li>
+                <li><a class="footer__menu_link" href="">Вулиці, будинки</a></li>
+                <li><a class="footer__menu_link" href="">Пам'ятники, скульптури</a></li>
+                <li><a class="footer__menu_link" href="">Унікальні місця</a></li>
+            </ul>
+            
+            <ul class="menu footer__menu">
+                <h2 class="footer__menu_heading">Вибране</h2>
+                <li><a class="footer__menu_link" href="">Будинок Сікорського, Київ</a></li>
+                <li><a class="footer__menu_link" href="">Костьол Св.Олександра, Київ</a></li>
+                <li><a class="footer__menu_link" href="">Пішохідний міст, Ужгород</a></li>
+                <li><a class="footer__menu_link" href="">Сквер Е.Бокшая, Вінниця</a></li>
+                <li><a class="footer__menu_link" href="">Музей Коцюбинського, Вінниця</a></li>
+                <li><a class="footer__menu_link" href="">Будиночок Гоголя, Одеса</a></li>
+                <li><a class="footer__menu_link" href="">Площа Ринок, Львів</a></li>
+            </ul>
+
+            <ul class="menu footer__menu">
+                <h2 class="footer__menu_heading">Популярні опції</h2>
+                <li><a class="footer__menu_link" href="">Шукати за геолокацією</a></li>
+                <li><a class="footer__menu_link" href="">Шукати за адресою</a></li>
+                <li><a class="footer__menu_link" href="">Останні колекції</a></li>
+                <li><a class="footer__menu_link" href="">Створити власну колекцію</a></li>
+                <li><a class="footer__menu_link" href="">Поставити теплу точку на карті</a></li>
+                <li><a class="footer__menu_link" href="">Вивчити місто або категорію</a></li>
+            </ul>
+
+            <ul class="menu footer__menu">
+                <h2 class="footer__menu_heading">Міста</h2>
+                <li><a class="footer__menu_link" href="">Київ</a></li>
+                <li><a class="footer__menu_link" href="">Вінниця</a></li>
+                <li><a class="footer__menu_link" href="">Ужгород</a></li>
+                <li><a class="footer__menu_link" href="">Одеса</a></li>
+                <li><a class="footer__menu_link" href="">Львів</a></li>
+                <li><a class="footer__menu_link" href="">Харків</a></li>
+                <li><a class="footer__menu_link" href="">Додати своє місто</a></li>
+            </ul>
+            <ul class="social">
+                <li><a class="social__link social__link_twitter" href=""></a></li>
+                <li><a class="social__link social__link_facebook" href=""></a></li>
+                <li><a class="social__link social__link_instagram" href=""></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="navy">
+            <p>&copy; 2016 Mushlya</p>
+        </div>
     </footer>
    
 </body>
