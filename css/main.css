@@ -408,6 +408,12 @@ label {
 	text-align: center;
 }
 
+.about__info ul li:before {
+    content:  "-";
+    position: relative;
+    left:     -4px;
+}
+
 .about_text {
 	color: #fff;
 	font-size: 14px;
