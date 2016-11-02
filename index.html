@@ -108,9 +108,32 @@
                    <button class="search_form search_form__global">
                         пошук...
                    </button>
-                   <div class="map">
+                   <!-- MAP -->
+                   <div class="search__type" id= "search_map">
+                        <!--  -->
+                        <script>
+                            function initMap() {
+                                var location = {lat: 50.442823, lng: 30.521538};
+                                var mapDiv = document.getElementById('search_map');
+                                var map = new google.maps.Map(mapDiv, {
+                                  center: location,
+                                  zoom: 10,
+                                  scrollwheel: false
+                                });
 
+                                new google.maps.Marker({
+                                    position: location,
+                                    map: map,
+                                                title: 'Fred&Fresh',
+                                                icon: 'img/icons_menu/hat.png'
+                                });
+                          }
+
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+                        <!--  -->
                    </div>
+                   <!-- END OF MAP -->
                </div>
                <div class="search__type hidden">
                    <div class="search__geolocation">
@@ -287,6 +310,5 @@
             <p>&copy; 2016 Mushlya</p>
         </div>
     </footer>
-
 </body>
 </html>
