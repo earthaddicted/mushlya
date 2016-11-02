@@ -342,7 +342,7 @@ label {
 }
 
 .visible:hover .search__type {
-	display: visible;
+	display: flex;
 }
 
 /* _________________ end search _________________*/
@@ -356,7 +356,7 @@ label {
 }
 
 .about__wrapper {
-	margin: 50px 350px 33px;
+	margin: 50px 20.5% 33px;
 	display: flex;
 	-webkit-justify-content: space-around;
 	        justify-content: space-around;
