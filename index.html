@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
 	<title>Mushlya</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
-
 </head>
 <body>
     <header>
@@ -15,11 +15,11 @@
                 <div class="logo"></div>
                 <ul class="menu menu__header">
                     <li class="menu__item"><a class="menu__link" href="">Головна</a></li>
-                    <li class="menu__item"><a class="menu__link"href="">Про нас</a></li>
-                    <li class="menu__item"><a class="menu__link"href="">Пам'ятки</a></li>
-                    <li class="menu__item"><a class="menu__link"href="">Міста</a></li>
-                    <li class="menu__item"><a class="menu__link"href="">Галерея</a></li>
-                    <li class="menu__item"><a class="menu__link"href="">Контакти</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Про нас</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Пам'ятки</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Міста</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Галерея</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Контакти</a></li>
                     <li class="menu__item menu__item_help"><a class="menu__link menu__link_help" href="">Допомогти проекту</a></li>
                 </ul>
                 <h1 class="name">Динамічна колекція цікавих міських просторів</h1>
@@ -110,38 +110,39 @@
                    </button>
                    <!-- MAP -->
                    <div class="search__type" id= "search_map">
-                        <!--  -->
                         <script>
                             function initMap() {
                                 var location = {lat: 50.442823, lng: 30.521538};
                                 var mapDiv = document.getElementById('search_map');
                                 var map = new google.maps.Map(mapDiv, {
                                   center: location,
-                                  zoom: 10,
+                                  zoom: 12,
                                   scrollwheel: false
                                 });
 
                                 new google.maps.Marker({
                                     position: location,
                                     map: map,
-                                                title: 'Fred&Fresh',
-                                                icon: 'img/icons_menu/hat.png'
+                                        title: 'search',
+                                        icon: 'img/placeholder.png'
                                 });
                           }
 
                         </script>
                         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-                        <!--  -->
                    </div>
                    <!-- END OF MAP -->
                </div>
-               <div class="search__type hidden">
+               <div class="search__type hidden ">
                    <div class="search__geolocation">
-                       Геолокація: On
+                        Геолокація: On
+                        <input type="checkbox" value="None" id="slideOne" name="check" checked />
+                        <label for="slideOne"></label>
+
                    </div>
                    <div class="search-radius">
                        <h3 class="search__title">РАДІУС ПОШУКУ</h3>
-                       <input type="text" class="search_form search_form__local search_form__local--left">
+                       <input type="text" class="search_form search_form__local search_form__local--left" placeholder="1 км">
                    </div>
                </div>
                <div class="search__type hidden">

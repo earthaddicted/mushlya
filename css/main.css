@@ -4,11 +4,6 @@
 			box-sizing: border-box;
 }
 
-html {
-	-webkit-justify-content: center;
-			justify-content: center;
-}
-
 body {
     background-image: url('../img/bgmap.png');
     background-position: center bottom;
@@ -37,6 +32,11 @@ section,
 .search,
 .label-text,
 .about,
+.search__type,
+.search__type label,
+.search__geolocation,
+.about__wrapper,
+.about__info,
 footer {
 	display: -webkit-flex;
 	  display: -moz-flex;
@@ -45,11 +45,39 @@ footer {
 			display: flex;
 }
 
+html,
 header,
 section,
-footer {
+footer,
+.search__wrapper,
+.search__type label > input[type="checkbox"]:checked + .label-text::before {
   -webkit-justify-content: center;
 		  justify-content: center;
+}
+
+.search__type,
+.search__geolocation,
+.about__info {
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.epochs__wrapper {
+	-webkit-justify-content: space-between;
+			justify-content: space-between;
+}
+
+.about__wrapper,
+.search__geolocation {
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+}
+
+.about__info,
+.label-text {
+	-webkit-align-items: center;
+	        align-items: center;
 }
 
 a {
@@ -172,8 +200,6 @@ body {
 }
 
 .epochs__wrapper {
-	-webkit-justify-content: space-between;
-			justify-content: space-between;
 	padding: 150px 100px 0;
 	transition: all .1s linear;
 }
@@ -181,6 +207,7 @@ body {
 .time-section {
 	padding-bottom: 100px;
 	transition: all .5s linear;
+	cursor: pointer;
 }
 
 .time-section:not(.time-section--active):hover {
@@ -215,7 +242,6 @@ body {
 .time-section--active .epochs__name {
 	padding-bottom: 36px;
 }
-
 /*.time-section--active .epochs__image {
 	margin: 15px 0 -15px;
 }*/
@@ -264,10 +290,14 @@ body {
 
 /* _________________ search _________________*/
 
+.search {
+	background: #FFF;
+	border-top: 10px solid #ead7a5;
+	border-bottom: 10px solid #ead7a5;
+}
+
 .search__wrapper {
 	padding: 35px 0;
-	-webkit-justify-content: center;
-	        justify-content: center;
 }
 
 .search__title {
@@ -276,17 +306,12 @@ body {
 	line-height: 24px;
 }
 .search__type {
-	display: flex;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
-	    margin-right: 25px;
+	margin-right: 25px;
 }
 
 .search__type label {
-    margin: 6px 0;
+    margin: 8px 0;
     cursor: pointer;
-    display: flex;
 }
 
 .label-text {
@@ -294,13 +319,11 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	margin: 0 15px;
-	align-items: center;
 }
 
 .search__type  input[type="checkbox"] {
 	display: none;
 }
-
 
 .search__type label > input[type="checkbox"] + .label-text::before {
 	content: "";
@@ -309,7 +332,7 @@ body {
 	-webkit-border-radius: 50%;
 	        border-radius: 50%;
 	display: inline-block;
-	margin: 0 4px 0 6px;
+	margin: 0 14px 0 6px;
 	font-size: 18px;
 	-webkit-transition: all 1s linear;
 	   -moz-transition: all 1s linear;
@@ -324,8 +347,6 @@ body {
 
 .search__type label > input[type="checkbox"]:checked + .label-text::before {
 		display: flex;
-		-webkit-justify-content: center;
-		        justify-content: center;
 		content: "\2714";
 		background-color: rgba(147, 147, 147, .5);
 		color: #fff;
@@ -346,6 +367,7 @@ body {
 	-webkit-background-size: 32px;
 	     -o-background-size: 32px;
 	        background-size: 32px;
+	margin: 10px 0 5px;
 }
 
 .search_form__local--right {
@@ -355,23 +377,18 @@ body {
 
 .search_form__local--left {
 	background-position: 1px 3px;
-	padding-left: 32px;
+	padding-left: 40px;
 }
 
 /*_____ MAP _____*/
 #search_map {
+	margin-top: 10px;
 	width: 100%;
 	height: 177px;
-}
-
-#search_map iframe {
-  width: 100%;
-  pointer-events: none;
 }
 /*_____ END  MAP _____*/
 
 /*search_form__global*/
-
 
 .search_form__global {
 	width: 340px;
@@ -385,6 +402,7 @@ body {
 	line-height: 20px;
 	text-transform: uppercase;
 	text-align: left;
+	margin-top: 30px;
 	padding-left: 21px;
 	letter-spacing: -2px;
 	cursor: pointer;
@@ -410,6 +428,70 @@ body {
 .global__search-activ:hover .hidden {
 	display: flex;
 }
+
+/* ----- geolocation ------*/
+.search__geolocation {
+    height: 100px;
+    margin: 30px 0 20px;
+}
+
+/*GEOOLOCATION BUTTON*/
+input[type=checkbox] {
+vertical-align: top;
+margin: 0 3px 0 0;
+width: 17px;
+height: 17px;
+}
+
+input[type=checkbox] + label {
+cursor: pointer;
+}
+
+input[type=checkbox]:not(checked) {
+position: absolute;
+opacity: 0;
+}
+
+input[type=checkbox]:not(checked) + label {
+position: relative; 
+padding: 0 0 0 60px;
+}
+
+
+input[type=checkbox]:not(checked) + label:before {
+content: '';
+position: absolute;
+top: -4px;
+left: 0;
+width: 94px;
+height: 37px;
+border-radius: 12px;
+background: #7aae5d;
+box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+
+input[type=checkbox]:not(checked) + label:after {
+content: '';
+position: absolute;
+top: -2px;
+left: 2px;
+width: 31px;
+height: 31px;
+border-radius: 50%;
+background: #FFF;
+box-shadow: 0 2px 5px rgba(0,0,0,.3);
+transition: all .2s; 
+}
+
+input[type=checkbox]:checked + label:after {
+left: 61px;
+}
+
+input[type=checkbox]:focus + label:before {
+box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+/*GEOOLOCATION BUTTON*/
+/* ----- geolocation ------*/
 
 /* _________________ end search _________________*/
 
@@ -539,25 +621,11 @@ body {
 }
 
 /* _________________ about _________________*/
-.about {
-	/*background: url('../img/bgmap.png');
-	-webkit-background-size: contain;
-	     -o-background-size: contain;
-	        background-size: contain;*/
-}
-
 .about__wrapper {
 	margin: 50px 20.5% 33px;
-	display: flex;
-	-webkit-justify-content: space-around;
-	        justify-content: space-around;
 }
 
 .about__info {
-	display: flex;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
 	-webkit-align-items: center;
 	        align-items: center;
 	line-height: 24px;
